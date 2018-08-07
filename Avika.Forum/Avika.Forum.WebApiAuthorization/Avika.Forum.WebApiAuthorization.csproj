@@ -277,21 +277,9 @@
     </Compile>
     <Compile Include="Infrastructure\ApplicationUserManager.cs" />
     <Compile Include="Infrastructure\CustomAuthorizeAttribute.cs" />
-    <Compile Include="Migrations\201807181538062_InitialMigrations.cs" />
-    <Compile Include="Migrations\201807181538062_InitialMigrations.Designer.cs">
-      <DependentUpon>201807181538062_InitialMigrations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807181617383_agregarfc.cs" />
-    <Compile Include="Migrations\201807181617383_agregarfc.Designer.cs">
-      <DependentUpon>201807181617383_agregarfc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807232226395_quitaCamporoleid.cs" />
-    <Compile Include="Migrations\201807232226395_quitaCamporoleid.Designer.cs">
-      <DependentUpon>201807232226395_quitaCamporoleid.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807241516225_agregaFechaNacimiento.cs" />
-    <Compile Include="Migrations\201807241516225_agregaFechaNacimiento.Designer.cs">
-      <DependentUpon>201807241516225_agregaFechaNacimiento.cs</DependentUpon>
+    <Compile Include="Migrations\201808071813076_initial.cs" />
+    <Compile Include="Migrations\201808071813076_initial.Designer.cs">
+      <DependentUpon>201808071813076_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AudienceModel.cs" />
@@ -383,17 +371,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807181538062_InitialMigrations.resx">
-      <DependentUpon>201807181538062_InitialMigrations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807181617383_agregarfc.resx">
-      <DependentUpon>201807181617383_agregarfc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807232226395_quitaCamporoleid.resx">
-      <DependentUpon>201807232226395_quitaCamporoleid.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807241516225_agregaFechaNacimiento.resx">
-      <DependentUpon>201807241516225_agregaFechaNacimiento.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808071813076_initial.resx">
+      <DependentUpon>201808071813076_initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

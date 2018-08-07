@@ -12,10 +12,9 @@
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
 
-using Avika.Forum.Model;
-
 namespace Avika.Forum.DAO
 {
+    using Avika.Forum.Model;
 
     // AspNetUsers
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.37.0.0")]

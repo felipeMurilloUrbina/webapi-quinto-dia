@@ -58,16 +58,11 @@ namespace Avika.Forum.Model
         /// Child AspNetUserLogins where [AspNetUserLogins].[UserId] point to this entity (FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId)
         /// </summary>
         public virtual System.Collections.Generic.ICollection<AspNetUserLogin> AspNetUserLogins { get; set; } // AspNetUserLogins.FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId
-        /// <summary>
-        /// Child Employees where [Employees].[AspNetUserId] point to this entity (FK_Employees_AspNetUsers)
-        /// </summary>
-        public virtual System.Collections.Generic.ICollection<Employee> Employees { get; set; } // Employees.FK_Employees_AspNetUsers
 
         public AspNetUser()
         {
             AspNetUserClaims = new System.Collections.Generic.List<AspNetUserClaim>();
             AspNetUserLogins = new System.Collections.Generic.List<AspNetUserLogin>();
-            Employees = new System.Collections.Generic.List<Employee>();
             AspNetRoles = new System.Collections.Generic.List<AspNetRole>();
             InitializePartial();
         }

@@ -13,18 +13,12 @@ namespace Avika.Forum.WebApiAuthorization.Models
 {
     public class User : IdentityUser
     {
-        public string Name { get; set; }
-
-        public string LastName { get; set; }
-        public int ? CompanyId { get; set; }
-        public int ? DepartmentId { get; set; }
+        public int GranjaId { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
         [Required]
         public DateTime JoinDate { get; set; }
-        public DateTime BirthDate { get; set; }
-        public DateTime ? IncorporationDate { get; set; }
-        public string Rfc { get; set; }
-        public string Language { get; set; }
-        public bool Active { get; set; }
+        public bool Activo { get; set; }
         public string Avatar { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager, string authenticationType)

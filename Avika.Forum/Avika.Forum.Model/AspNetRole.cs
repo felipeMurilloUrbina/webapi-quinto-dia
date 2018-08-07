@@ -14,10 +14,11 @@
 
 namespace Avika.Forum.Model
 {
+    using Avika.Forum.Model;
 
     // AspNetRoles
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.37.0.0")]
-    public class AspNetRole
+    public partial class AspNetRole
     {
         public string Id { get; set; } // Id (Primary key) (length: 128)
         public string Name { get; set; } // Name (length: 256)
@@ -25,19 +26,17 @@ namespace Avika.Forum.Model
         // Reverse navigation
 
         /// <summary>
-        /// Child AspNetUsers where [AspNetUsers].[RoleId] point to this entity (FK_dbo.AspNetUsers_dbo.AspNetRoles_RoleId)
-        /// </summary>
-        public virtual System.Collections.Generic.ICollection<AspNetUser> AspNetUsers_RoleId { get; set; } // AspNetUsers.FK_dbo.AspNetUsers_dbo.AspNetRoles_RoleId
-        /// <summary>
         /// Child AspNetUsers (Many-to-Many) mapped by table [AspNetUserRoles]
         /// </summary>
-        public virtual System.Collections.Generic.ICollection<AspNetUser> AspNetUsers_UserId { get; set; } // Many to many mapping
+        public virtual System.Collections.Generic.ICollection<AspNetUser> AspNetUsers { get; set; } // Many to many mapping
 
         public AspNetRole()
         {
-            AspNetUsers_RoleId = new System.Collections.Generic.List<AspNetUser>();
-            AspNetUsers_UserId = new System.Collections.Generic.List<AspNetUser>();
+            AspNetUsers = new System.Collections.Generic.List<AspNetUser>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
 }

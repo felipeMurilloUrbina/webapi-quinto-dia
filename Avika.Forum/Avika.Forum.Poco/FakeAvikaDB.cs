@@ -25,12 +25,7 @@ namespace Avika.Forum.Model
         public System.Data.Entity.DbSet<AspNetUser> AspNetUsers { get; set; }
         public System.Data.Entity.DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public System.Data.Entity.DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
-        public System.Data.Entity.DbSet<Category> Categories { get; set; }
-        public System.Data.Entity.DbSet<Company> Companies { get; set; }
-        public System.Data.Entity.DbSet<Department> Departments { get; set; }
-        public System.Data.Entity.DbSet<Employee> Employees { get; set; }
-        public System.Data.Entity.DbSet<NewHasPhoto> NewHasPhotoes { get; set; }
-        public System.Data.Entity.DbSet<News> News { get; set; }
+        public System.Data.Entity.DbSet<Granja> Granjas { get; set; }
 
         public FakeAvikaDB()
         {
@@ -42,12 +37,7 @@ namespace Avika.Forum.Model
             AspNetUsers = new FakeDbSet<AspNetUser>("Id");
             AspNetUserClaims = new FakeDbSet<AspNetUserClaim>("Id");
             AspNetUserLogins = new FakeDbSet<AspNetUserLogin>("LoginProvider", "ProviderKey", "UserId");
-            Categories = new FakeDbSet<Category>("Id");
-            Companies = new FakeDbSet<Company>("Id");
-            Departments = new FakeDbSet<Department>("Id");
-            Employees = new FakeDbSet<Employee>("Id");
-            NewHasPhotoes = new FakeDbSet<NewHasPhoto>("Id");
-            News = new FakeDbSet<News>("Id");
+            Granjas = new FakeDbSet<Granja>("Id");
         }
 
         public int SaveChangesCount { get; private set; }

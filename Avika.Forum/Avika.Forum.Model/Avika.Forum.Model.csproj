@@ -61,20 +61,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetRole.cs" />
     <Compile Include="AspNetUser.cs" />
-    <Compile Include="Category.cs" />
-    <Compile Include="Company.cs" />
-    <Compile Include="Department.cs" />
-    <Compile Include="Employee.cs" />
+    <Compile Include="AspNetUserClaim.cs" />
+    <Compile Include="AspNetUserLogin.cs" />
     <Compile Include="Extensions\Category.cs" />
     <Compile Include="Extensions\Company.cs" />
     <Compile Include="Extensions\Department.cs" />
     <Compile Include="Extensions\Employee.cs" />
+    <Compile Include="Granja.cs" />
     <Compile Include="Interfaces\ICatalogBasic.cs" />
     <Compile Include="Interfaces\IDeleteLogic.cs" />
-    <Compile Include="IObject.cs" />
-    <Compile Include="NewHasPhoto.cs" />
-    <Compile Include="New.cs" />
+    <Compile Include="Interfaces\IObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

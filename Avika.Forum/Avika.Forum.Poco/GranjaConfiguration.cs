@@ -12,31 +12,27 @@
 #pragma warning disable 1591    //  Ignore "Missing XML Comment" warning
 
 
-using Avika.Forum.Model;
-
-namespace Avika.Forum.DAO
+namespace Avika.Forum.Model
 {
+    using Avika.Forum.Model;
 
-    // Departments
+    // Granjas
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.37.0.0")]
-    public class DepartmentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Department>
+    public class GranjaConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Granja>
     {
-        public DepartmentConfiguration()
+        public GranjaConfiguration()
             : this("dbo")
         {
         }
 
-        public DepartmentConfiguration(string schema)
+        public GranjaConfiguration(string schema)
         {
-            ToTable("Departments", schema);
+            ToTable("Granjas", schema);
             HasKey(x => x.Id);
 
             Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
-            Property(x => x.Description).HasColumnName(@"Description").HasColumnType("varchar").IsRequired().IsUnicode(false).HasMaxLength(300);
-            Property(x => x.UserCreatorId).HasColumnName(@"UserCreatorId").HasColumnType("nvarchar").IsRequired().HasMaxLength(128);
-            Property(x => x.UserModificatorId).HasColumnName(@"UserModificatorId").HasColumnType("nvarchar").IsOptional().HasMaxLength(128);
-            Property(x => x.DateCreation).HasColumnName(@"DateCreation").HasColumnType("datetime").IsRequired();
-            Property(x => x.Active).HasColumnName(@"Active").HasColumnType("bit").IsRequired();
+            Property(x => x.Descripcion).HasColumnName(@"Descripcion").HasColumnType("nvarchar").IsRequired().HasMaxLength(100);
+            Property(x => x.CadenaConexion).HasColumnName(@"CadenaConexion").HasColumnType("nvarchar").IsRequired().HasMaxLength(300);
         }
     }
 

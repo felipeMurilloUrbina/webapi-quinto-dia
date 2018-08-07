@@ -51,22 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetRoleConfiguration.cs" />
+    <Compile Include="AspNetUserClaimConfiguration.cs" />
     <Compile Include="AspNetUserConfiguration.cs" />
-    <Compile Include="CategoryConfiguration.cs" />
-    <Compile Include="CategoryRepository.cs" />
-    <Compile Include="CompanyConfiguration.cs" />
-    <Compile Include="CompanyRepository.cs" />
+    <Compile Include="AspNetUserLoginConfiguration.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="DepartmentConfiguration.cs" />
-    <Compile Include="EmployeeConfiguration.cs" />
-    <Compile Include="EmployeeRepository.cs" />
-    <Compile Include="IContext.cs" />
-    <Compile Include="NewHasPhotoConfiguration.cs" />
-    <Compile Include="NewConfiguration.cs" />
+    <Compile Include="GranjaConfiguration.cs" />
     <Compile Include="Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
-    <Compile Include="DepartmentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

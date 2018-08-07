@@ -29,12 +29,10 @@ namespace Avika.Forum.DAO
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new AspNetUserConfiguration());
-            modelBuilder.Configurations.Add(new CategoryConfiguration());
-            modelBuilder.Configurations.Add(new CompanyConfiguration());
-            modelBuilder.Configurations.Add(new DepartmentConfiguration());
-            modelBuilder.Configurations.Add(new EmployeeConfiguration());
-            modelBuilder.Configurations.Add(new NewConfiguration());
-            modelBuilder.Configurations.Add(new NewHasPhotoConfiguration());
+            modelBuilder.Configurations.Add(new AspNetRoleConfiguration());
+            modelBuilder.Configurations.Add(new AspNetUserClaimConfiguration());
+            modelBuilder.Configurations.Add(new AspNetUserLoginConfiguration());
+            modelBuilder.Configurations.Add(new GranjaConfiguration());
             AddFilters(ref modelBuilder);
         }
 

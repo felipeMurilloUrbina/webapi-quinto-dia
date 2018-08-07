@@ -14,10 +14,11 @@
 
 namespace Avika.Forum.Model
 {
+    using Avika.Forum.Model;
 
     // AspNetUsers
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.37.0.0")]
-    public class AspNetUser
+    public partial class AspNetUser
     {
         public string Id { get; set; } // Id (Primary key) (length: 128)
         public string Name { get; set; } // Name
@@ -48,22 +49,25 @@ namespace Avika.Forum.Model
         /// <summary>
         /// Child AspNetRoles (Many-to-Many) mapped by table [AspNetUserRoles]
         /// </summary>
-        //public virtual System.Collections.Generic.ICollection<AspNetRole> AspNetRoles { get; set; } // Many to many mapping
-        ///// <summary>
-        ///// Child AspNetUserClaims where [AspNetUserClaims].[UserId] point to this entity (FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId)
-        ///// </summary>
-        //public virtual System.Collections.Generic.ICollection<AspNetUserClaim> AspNetUserClaims { get; set; } // AspNetUserClaims.FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId
-        ///// <summary>
-        ///// Child AspNetUserLogins where [AspNetUserLogins].[UserId] point to this entity (FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId)
-        ///// </summary>
-        //public virtual System.Collections.Generic.ICollection<AspNetUserLogin> AspNetUserLogins { get; set; } // AspNetUserLogins.FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId
+        public virtual System.Collections.Generic.ICollection<AspNetRole> AspNetRoles { get; set; } // Many to many mapping
+        /// <summary>
+        /// Child AspNetUserClaims where [AspNetUserClaims].[UserId] point to this entity (FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId)
+        /// </summary>
+        public virtual System.Collections.Generic.ICollection<AspNetUserClaim> AspNetUserClaims { get; set; } // AspNetUserClaims.FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId
+        /// <summary>
+        /// Child AspNetUserLogins where [AspNetUserLogins].[UserId] point to this entity (FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId)
+        /// </summary>
+        public virtual System.Collections.Generic.ICollection<AspNetUserLogin> AspNetUserLogins { get; set; } // AspNetUserLogins.FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId
 
         public AspNetUser()
         {
-            //AspNetUserClaims = new System.Collections.Generic.List<AspNetUserClaim>();
-            //AspNetUserLogins = new System.Collections.Generic.List<AspNetUserLogin>();
-            //AspNetRoles = new System.Collections.Generic.List<AspNetRole>();
+            AspNetUserClaims = new System.Collections.Generic.List<AspNetUserClaim>();
+            AspNetUserLogins = new System.Collections.Generic.List<AspNetUserLogin>();
+            AspNetRoles = new System.Collections.Generic.List<AspNetRole>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
 }

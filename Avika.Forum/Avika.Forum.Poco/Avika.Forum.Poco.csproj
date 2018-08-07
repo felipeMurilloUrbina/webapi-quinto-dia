@@ -76,49 +76,19 @@
     <Compile Include="AvikaDBFactory.cs">
       <DependentUpon>AvikaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CategoryConfiguration.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Company.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyConfiguration.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Department.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DepartmentConfiguration.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employee.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeConfiguration.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="FakeAvikaDB.cs">
       <DependentUpon>AvikaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="FakeDbSet.cs">
       <DependentUpon>AvikaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Granja.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GranjaConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="IAvikaDB.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NewHasPhoto.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NewHasPhotoConfiguration.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="News.cs">
-      <DependentUpon>AvikaDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NewsConfiguration.cs">
       <DependentUpon>AvikaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

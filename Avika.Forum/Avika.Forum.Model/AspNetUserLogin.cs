@@ -14,10 +14,11 @@
 
 namespace Avika.Forum.Model
 {
+    using Avika.Forum.Model;
 
     // AspNetUserLogins
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.37.0.0")]
-    public class AspNetUserLogin
+    public partial class AspNetUserLogin
     {
         public string LoginProvider { get; set; } // LoginProvider (Primary key) (length: 128)
         public string ProviderKey { get; set; } // ProviderKey (Primary key) (length: 128)
@@ -29,6 +30,13 @@ namespace Avika.Forum.Model
         /// Parent AspNetUser pointed by [AspNetUserLogins].([UserId]) (FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId)
         /// </summary>
         public virtual AspNetUser AspNetUser { get; set; } // FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId
+
+        public AspNetUserLogin()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
 }

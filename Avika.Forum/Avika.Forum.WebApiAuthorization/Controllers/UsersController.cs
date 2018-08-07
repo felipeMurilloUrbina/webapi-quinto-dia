@@ -72,6 +72,7 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
                 Email = createUserModel.Email,
                 Name = createUserModel.FirstName,
                 LastName = createUserModel.LastName,
+                BirthDate = DateTime.Now,
                 JoinDate = DateTime.Now.Date,
             };
 

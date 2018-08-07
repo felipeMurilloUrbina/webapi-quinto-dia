@@ -14,25 +14,22 @@
 
 namespace Avika.Forum.Model
 {
+    using Avika.Forum.Model;
 
-    // NewHasPhotos
+    // Granjas
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.37.0.0")]
-    public class NewHasPhoto
+    public partial class Granja
     {
         public int Id { get; set; } // Id (Primary key)
-        public int NewId { get; set; } // NewId
-        public byte[] NameHistoric { get; set; } // NameHistoric (length: 70)
-        public byte[] Namephysical { get; set; } // Namephysical (length: 70)
-        public string UserCreatorId { get; set; } // UserCreatorId (length: 128)
-        public System.DateTime DateCreation { get; set; } // DateCreation
-        public bool Active { get; set; } // Active
+        public string Descripcion { get; set; } // Descripcion (length: 100)
+        public string CadenaConexion { get; set; } // CadenaConexion (length: 300)
 
-        // Foreign keys
+        public Granja()
+        {
+            InitializePartial();
+        }
 
-        /// <summary>
-        /// Parent News pointed by [NewHasPhotos].([NewId]) (FK_NewHasPhotos_News)
-        /// </summary>
-        public virtual New News { get; set; } // FK_NewHasPhotos_News
+        partial void InitializePartial();
     }
 
 }
