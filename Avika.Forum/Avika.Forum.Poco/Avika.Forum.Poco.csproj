@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E5B4E8F-4C45-42CC-B533-B7AFA234DC5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Avika.Forum.Poco</RootNamespace>
+    <AssemblyName>Avika.Forum.Poco</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRoleConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaimConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLoginConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AvikaDB.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AvikaDBFactory.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FakeAvikaDB.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FakeDbSet.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IAvikaDB.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewHasPhoto.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewHasPhotoConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="News.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AvikaDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AvikaDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="EF.Reverse.POCO.ttinclude" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,27 @@
+Error: 06/08/2018 02:02 p.m.(12) - System.InvalidOperationException: Attaching an entity of type 'Avika.Forum.Model.Company' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   en System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   en System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   en System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   en System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   en Avika.Forum.DAO.Repository`1.<Put>d__10.MoveNext() en C:\self\git\avikaweb-api\Avika.Forum\Avika.Forum.DAO\Repository.cs:línea 93
+Error: 06/08/2018 02:06 p.m.(15) - System.InvalidOperationException: Attaching an entity of type 'Avika.Forum.Model.Company' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   en System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   en System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   en System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   en System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   en Avika.Forum.DAO.Repository`1.<Put>d__10.MoveNext() en C:\self\git\avikaweb-api\Avika.Forum\Avika.Forum.DAO\Repository.cs:línea 93
+Error: 06/08/2018 03:28 p.m.(5) - System.InvalidOperationException: Attaching an entity of type 'Avika.Forum.Model.Company' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+   en System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   en System.Data.Entity.Core.Objects.ObjectContext.AttachTo(String entitySetName, Object entity)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.<>c__DisplayClassa.<Attach>b__9()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Attach(Object entity)
+   en System.Data.Entity.Internal.InternalEntityEntry.set_State(EntityState value)
+   en System.Data.Entity.Infrastructure.DbEntityEntry`1.set_State(EntityState value)
+   en Avika.Forum.DAO.Repository`1.<Put>d__10.MoveNext() en C:\self\git\avikaweb-api\Avika.Forum\Avika.Forum.DAO\Repository.cs:línea 93
