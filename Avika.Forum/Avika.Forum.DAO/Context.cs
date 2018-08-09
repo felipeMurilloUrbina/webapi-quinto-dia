@@ -12,14 +12,18 @@ namespace Avika.Forum.DAO
 {
     public class Context : DbContext, IContext
     {
+        public DbSet<AspNetRole> AspNetRoles { get; set; }
         public DbSet<AspNetUser> AspNetUsers { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Company> Companies { get; set; }
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Employee> Employees { get; set; }
-
-        public DbSet<NewHasPhoto> NewHasPhotos { get; set; }
-        public DbSet<New> News { get; set; }
+        public DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public DbSet<CoArtBod> ArticulosBodegas { get; set; }
+        public DbSet<CoArticu> Articulos { get; set; }
+        public DbSet<CoBodega> Bodegas { get; set; }
+        public DbSet<CoCatPro> Categorias { get; set; }
+        public DbSet<CoCentroCosto> CentroCostos{ get; set; }
+        public DbSet<CoMovInv> MovimientosInventario { get; set; }
+        public DbSet<CoTipMat> Tipos { get; set; }
+        public DbSet<Granja> Granjas { get; set; }
         public Context()
            : base("name=DefaultConnection")
         {
@@ -31,6 +35,13 @@ namespace Avika.Forum.DAO
             modelBuilder.Configurations.Add(new AspNetUserConfiguration());
             modelBuilder.Configurations.Add(new AspNetRoleConfiguration());
             modelBuilder.Configurations.Add(new AspNetUserClaimConfiguration());
+            modelBuilder.Configurations.Add(new CoArtBodConfiguration());
+            modelBuilder.Configurations.Add(new CoArticuConfiguration());
+            modelBuilder.Configurations.Add(new CoMovInvConfiguration());
+            modelBuilder.Configurations.Add(new CoTipMatConfiguration());
+            modelBuilder.Configurations.Add(new CoBodegaConfiguration());
+            modelBuilder.Configurations.Add(new CoCentroCostoConfiguration());
+            modelBuilder.Configurations.Add(new CoCatProConfiguration());
             modelBuilder.Configurations.Add(new AspNetUserLoginConfiguration());
             modelBuilder.Configurations.Add(new GranjaConfiguration());
             AddFilters(ref modelBuilder);

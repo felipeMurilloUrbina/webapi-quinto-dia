@@ -55,8 +55,16 @@
     <Compile Include="AspNetUserClaimConfiguration.cs" />
     <Compile Include="AspNetUserConfiguration.cs" />
     <Compile Include="AspNetUserLoginConfiguration.cs" />
+    <Compile Include="CoArtBodConfiguration.cs" />
+    <Compile Include="CoArticuConfiguration.cs" />
+    <Compile Include="CoBodegaConfiguration.cs" />
+    <Compile Include="CoCatProConfiguration.cs" />
+    <Compile Include="CoCentroCostoConfiguration.cs" />
+    <Compile Include="CoMovInvConfiguration.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="CoTipMatConfiguration.cs" />
     <Compile Include="GranjaConfiguration.cs" />
+    <Compile Include="IContext.cs" />
     <Compile Include="Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />

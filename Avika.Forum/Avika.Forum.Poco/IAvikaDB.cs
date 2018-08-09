@@ -22,6 +22,13 @@ namespace Avika.Forum.Model
         System.Data.Entity.DbSet<AspNetUser> AspNetUsers { get; set; } // AspNetUsers
         System.Data.Entity.DbSet<AspNetUserClaim> AspNetUserClaims { get; set; } // AspNetUserClaims
         System.Data.Entity.DbSet<AspNetUserLogin> AspNetUserLogins { get; set; } // AspNetUserLogins
+        System.Data.Entity.DbSet<CoArtBod> CoArtBods { get; set; } // COArtBod
+        System.Data.Entity.DbSet<CoArticu> CoArticus { get; set; } // COArticu
+        System.Data.Entity.DbSet<CoBodega> CoBodegas { get; set; } // COBodega
+        System.Data.Entity.DbSet<CoCatPro> CoCatProes { get; set; } // COCatPro
+        System.Data.Entity.DbSet<CoCentroCosto> CoCentroCostoes { get; set; } // COCentroCostos
+        System.Data.Entity.DbSet<CoMovInv> CoMovInvs { get; set; } // COMovInv
+        System.Data.Entity.DbSet<CoTipMat> CoTipMats { get; set; } // COTipMat
         System.Data.Entity.DbSet<Granja> Granjas { get; set; } // Granjas
 
         int SaveChanges();

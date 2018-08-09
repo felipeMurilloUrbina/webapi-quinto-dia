@@ -65,10 +65,14 @@
     <Compile Include="AspNetUser.cs" />
     <Compile Include="AspNetUserClaim.cs" />
     <Compile Include="AspNetUserLogin.cs" />
-    <Compile Include="Extensions\Category.cs" />
-    <Compile Include="Extensions\Company.cs" />
-    <Compile Include="Extensions\Department.cs" />
-    <Compile Include="Extensions\Employee.cs" />
+    <Compile Include="CoArtBod.cs" />
+    <Compile Include="CoArticu.cs" />
+    <Compile Include="CoBodega.cs" />
+    <Compile Include="CoCatPro.cs" />
+    <Compile Include="CoCentroCosto.cs" />
+    <Compile Include="CoMovInv.cs" />
+    <Compile Include="CoTipMat.cs" />
+    <Compile Include="Extensions\CoArticu.cs" />
     <Compile Include="Granja.cs" />
     <Compile Include="Interfaces\ICatalogBasic.cs" />
     <Compile Include="Interfaces\IDeleteLogic.cs" />
@@ -79,5 +83,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

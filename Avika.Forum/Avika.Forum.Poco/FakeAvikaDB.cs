@@ -25,6 +25,13 @@ namespace Avika.Forum.Model
         public System.Data.Entity.DbSet<AspNetUser> AspNetUsers { get; set; }
         public System.Data.Entity.DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public System.Data.Entity.DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public System.Data.Entity.DbSet<CoArtBod> CoArtBods { get; set; }
+        public System.Data.Entity.DbSet<CoArticu> CoArticus { get; set; }
+        public System.Data.Entity.DbSet<CoBodega> CoBodegas { get; set; }
+        public System.Data.Entity.DbSet<CoCatPro> CoCatProes { get; set; }
+        public System.Data.Entity.DbSet<CoCentroCosto> CoCentroCostoes { get; set; }
+        public System.Data.Entity.DbSet<CoMovInv> CoMovInvs { get; set; }
+        public System.Data.Entity.DbSet<CoTipMat> CoTipMats { get; set; }
         public System.Data.Entity.DbSet<Granja> Granjas { get; set; }
 
         public FakeAvikaDB()
@@ -37,6 +44,13 @@ namespace Avika.Forum.Model
             AspNetUsers = new FakeDbSet<AspNetUser>("Id");
             AspNetUserClaims = new FakeDbSet<AspNetUserClaim>("Id");
             AspNetUserLogins = new FakeDbSet<AspNetUserLogin>("LoginProvider", "ProviderKey", "UserId");
+            CoArtBods = new FakeDbSet<CoArtBod>("NumArtArb", "BodegaArb");
+            CoArticus = new FakeDbSet<CoArticu>("CodigoArt");
+            CoBodegas = new FakeDbSet<CoBodega>("CodigoBod");
+            CoCatProes = new FakeDbSet<CoCatPro>("CategoriaCap");
+            CoCentroCostoes = new FakeDbSet<CoCentroCosto>("Codigo");
+            CoMovInvs = new FakeDbSet<CoMovInv>("FecAsenMoi", "HoraAsenMoi", "ModuloMoi", "PrefDocMoi", "NumDocMoi", "NumLineaMoi", "NumArtMoi", "BodegaMoi");
+            CoTipMats = new FakeDbSet<CoTipMat>("TipoTim");
             Granjas = new FakeDbSet<Granja>("Id");
         }
 

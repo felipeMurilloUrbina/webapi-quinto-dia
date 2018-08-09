@@ -16,6 +16,7 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
     public class BaseApiController : ApiController
     {
         public Logger _logger = null;
+        public Context context;
         private ModelFactory _modelFactory;
         private ApplicationUserManager _AppUserManager = null;
 

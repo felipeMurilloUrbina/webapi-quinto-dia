@@ -27,7 +27,7 @@ namespace Avika.Forum.WebApiAuthorization.Models
                 Url = _UrlHelper.Link("GetUserById", new { id = appUser.Id }),
                 Id = appUser.Id,
                 UserName = appUser.UserName,
-                FullName = string.Format("{0} {1}", appUser.Name, appUser.LastName),
+                FullName = string.Format("{0} {1}", appUser.Nombre, appUser.Apellido),
                 Email = appUser.Email,
                 EmailConfirmed = appUser.EmailConfirmed,
                 JoinDate = appUser.JoinDate,

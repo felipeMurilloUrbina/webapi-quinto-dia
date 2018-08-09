@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Avika.Forum.Model
 {
-    public partial class Company: IObject, IDeleteLogic
+    public partial class CoArticu
     {
     }
 }

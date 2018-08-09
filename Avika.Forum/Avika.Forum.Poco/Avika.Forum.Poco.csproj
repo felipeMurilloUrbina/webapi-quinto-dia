@@ -76,6 +76,48 @@
     <Compile Include="AvikaDBFactory.cs">
       <DependentUpon>AvikaDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="CoArtBod.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoArtBodConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoArticu.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoArticuConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoBodega.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoBodegaConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoCatPro.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoCatProConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoCentroCosto.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoCentroCostoConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoMovInv.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoMovInvConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoTipMat.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoTipMatConfiguration.cs">
+      <DependentUpon>AvikaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="FakeAvikaDB.cs">
       <DependentUpon>AvikaDB.tt</DependentUpon>
     </Compile>
