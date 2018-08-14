@@ -47,6 +47,13 @@ namespace Avika.Forum.Model
         public string NumEntSalMoi { get; set; } // num_ent_sal_moi (length: 8)
         public string NumTransMoi { get; set; } // num_trans_moi (length: 8)
 
+        // Foreign keys
+
+        /// <summary>
+        /// Parent CoBodega pointed by [COMovInv].([BodegaMoi]) (FK_COMovInv_COBodega)
+        /// </summary>
+        public virtual CoBodega CoBodega { get; set; } // FK_COMovInv_COBodega
+
         public CoMovInv()
         {
             InitializePartial();

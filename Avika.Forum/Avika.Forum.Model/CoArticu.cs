@@ -40,9 +40,26 @@ namespace Avika.Forum.Model
         public string CodigoBarras { get; set; } // codigo_barras (length: 20)
         public string OrganArt { get; set; } // organ_art (length: 1)
         public string ClasifArt { get; set; } // clasif_art (length: 15)
+        public int Id { get; set; } // Id
+
+        // Foreign keys
+
+        /// <summary>
+        /// Parent CoCatPro pointed by [COArticu].([CatProdArt]) (FK_COArticu_COCatPro)
+        /// </summary>
+        public virtual CoCatPro CoCatPro { get; set; } // FK_COArticu_COCatPro
+
+        /// <summary>
+        /// Parent CoTipMat pointed by [COArticu].([TipMatArt]) (FK_COArticu_COTipMat)
+        /// </summary>
+        public virtual CoTipMat CoTipMat { get; set; } // FK_COArticu_COTipMat
 
         public CoArticu()
         {
+            ProvArt = "";
+            CodArtProv = "";
+            CodigoBarras = "";
+            OrganArt = "";
             InitializePartial();
         }
 

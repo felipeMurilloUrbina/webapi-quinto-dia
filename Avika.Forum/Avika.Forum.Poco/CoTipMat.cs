@@ -23,8 +23,16 @@ namespace Avika.Forum.Model
         public string TipoTim { get; set; } // tipo_tim (Primary key) (length: 3)
         public string DescripTim { get; set; } // descrip_tim (length: 15)
 
+        // Reverse navigation
+
+        /// <summary>
+        /// Child CoArticus where [COArticu].[tip_mat_art] point to this entity (FK_COArticu_COTipMat)
+        /// </summary>
+        public virtual System.Collections.Generic.ICollection<CoArticu> CoArticus { get; set; } // COArticu.FK_COArticu_COTipMat
+
         public CoTipMat()
         {
+            CoArticus = new System.Collections.Generic.List<CoArticu>();
             InitializePartial();
         }
 

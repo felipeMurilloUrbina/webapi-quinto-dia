@@ -26,6 +26,7 @@ namespace Avika.Forum.Model
         public decimal? Ingreso { get; set; } // ingreso
         public decimal? Porcentaje { get; set; } // porcentaje
         public string Cliente { get; set; } // cliente (length: 12)
+        public int Id { get; set; } // Id
 
         public CoCentroCosto()
         {

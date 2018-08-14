@@ -72,6 +72,53 @@ namespace Avika.Forum.Model
 
         public CoArtBod()
         {
+            StatusArb = "";
+            PrevStatArb = "";
+            CanExiArb = 0m;
+            CanAsiArb = 0m;
+            CanPenArb = 0m;
+            CanOrdArb = 0m;
+            PrecioArb = 0m;
+            CtoPromArb = 0m;
+            ValorInvArb = 0m;
+            UltCtoArb = 0m;
+            FecIniProArb = 0m;
+            FecFinProArb = 0m;
+            FecUltVtaArb = 0m;
+            PrePromArb = 0m;
+            CanUltVtaArb = 0m;
+            FecUltConArb = 0m;
+            VecInvFisArb = 0m;
+            ErrUltConArb = 0m;
+            VendPerArb = 0m;
+            CanVenPerArb = 0m;
+            VtaPerArb = 0m;
+            CtoPerArb = 0m;
+            VendAnoArb = 0m;
+            CanVenAnoArb = 0m;
+            DevAnoArb = 0m;
+            VtaAnoArb = 0m;
+            CtoAnoArb = 0m;
+            VenAnoAntArb = 0m;
+            CanVenAntArb = 0m;
+            VtaAnoAntArb = 0m;
+            CtoAnoAntArb = 0m;
+            CanComAnoArb = 0m;
+            ComAnoArb = 0m;
+            CanComAntArb = 0m;
+            ComAntArb = 0m;
+            MgenVtaArb = 0m;
+            MinCompArb = 0m;
+            MaxCompArb = 0m;
+            InvSegArb = 0m;
+            OrdActArb = 0m;
+            CodImpuArb = "";
+            CatProdArb = "";
+            ClaInvArb = "";
+            AplLisPreArb = "";
+            AplDctoArb = "";
+            DctoArb = 0m;
+            LocalizacionArb = "";
             InitializePartial();
         }
 

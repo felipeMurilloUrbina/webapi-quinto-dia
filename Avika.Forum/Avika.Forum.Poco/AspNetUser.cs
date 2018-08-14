@@ -21,13 +21,7 @@ namespace Avika.Forum.Model
     public partial class AspNetUser
     {
         public string Id { get; set; } // Id (Primary key) (length: 128)
-        public string Name { get; set; } // Name
-        public string LastName { get; set; } // LastName
-        public int? CompanyId { get; set; } // CompanyId
-        public int? DepartmentId { get; set; } // DepartmentId
         public System.DateTime JoinDate { get; set; } // JoinDate
-        public string Language { get; set; } // Language
-        public bool Active { get; set; } // Active
         public string Avatar { get; set; } // Avatar
         public string Email { get; set; } // Email (length: 256)
         public bool EmailConfirmed { get; set; } // EmailConfirmed
@@ -40,9 +34,10 @@ namespace Avika.Forum.Model
         public bool LockoutEnabled { get; set; } // LockoutEnabled
         public int AccessFailedCount { get; set; } // AccessFailedCount
         public string UserName { get; set; } // UserName (length: 256)
-        public string Rfc { get; set; } // Rfc
-        public System.DateTime BirthDate { get; set; } // BirthDate
-        public System.DateTime? IncorporationDate { get; set; } // IncorporationDate
+        public int GranjaId { get; set; } // GranjaId
+        public string Nombre { get; set; } // Nombre
+        public string Apellido { get; set; } // Apellido
+        public bool Activo { get; set; } // Activo
 
         // Reverse navigation
 
@@ -61,6 +56,8 @@ namespace Avika.Forum.Model
 
         public AspNetUser()
         {
+            GranjaId = 0;
+            Activo = false;
             AspNetUserClaims = new System.Collections.Generic.List<AspNetUserClaim>();
             AspNetUserLogins = new System.Collections.Generic.List<AspNetUserLogin>();
             AspNetRoles = new System.Collections.Generic.List<AspNetRole>();

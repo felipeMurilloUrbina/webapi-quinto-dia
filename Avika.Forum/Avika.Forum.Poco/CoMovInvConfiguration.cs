@@ -56,6 +56,9 @@ namespace Avika.Forum.Model
             Property(x => x.ComentMoi).HasColumnName(@"coment_moi").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(30);
             Property(x => x.NumEntSalMoi).HasColumnName(@"num_ent_sal_moi").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(8);
             Property(x => x.NumTransMoi).HasColumnName(@"num_trans_moi").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(8);
+
+            // Foreign keys
+            HasRequired(a => a.CoBodega).WithMany(b => b.CoMovInvs).HasForeignKey(c => c.BodegaMoi).WillCascadeOnDelete(false); // FK_COMovInv_COBodega
         }
     }
 

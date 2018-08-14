@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Avika.Forum.DAO
 {
-    public class Repository<T> where T: class, IObject
+    public class Repository<T> where T : class, IObject
     {
         readonly Context _context = null;
         readonly Logger _logger = null;
@@ -21,27 +21,41 @@ namespace Avika.Forum.DAO
         }
         public async Task<Pagination<T>> Get(int? page, int? qty)
         {
-            var totalItems = this._context.Set<T>().Count();
-            qty = qty == 0 ? totalItems : qty;
-            var totalPages = (int)Math.Ceiling((double)totalItems / (int)qty);
-            var items = this._context.Set<T>()
-                .OrderBy(c => c.Id)
-                .Skip(((int)page - 1) * (int)qty)
-                .Take((int)qty)
-                .ToList();
-            var result = new Pagination<T>()
+            try
             {
-                ItemPerPage = (int)qty,
-                TotalItems = totalItems,
-                TotalPages = totalPages,
-                CurrentPage = (int)page,
-                Items = items
-            };
-            return result;
+                var totalItems = this._context.Set<T>().Count();
+                qty = qty == 0 ? totalItems : qty;
+                var totalPages = (int)Math.Ceiling((double)totalItems / (int)qty);
+                var items = this._context.Set<T>()
+                    .OrderBy(c => c.Id)
+                    .Skip(((int)page - 1) * (int)qty)
+                    .Take((int)qty)
+                    .ToList();
+                var result = new Pagination<T>()
+                {
+                    ItemPerPage = (int)qty,
+                    TotalItems = totalItems,
+                    TotalPages = totalPages,
+                    CurrentPage = (int)page,
+                    Items = items
+                };
+                return result;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
         public async Task<T> GetId(int id)
         {
-            return this._context.Set<T>().Find(id);
+            try
+            {
+                return this._context.Set<T>().Find(id);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
         public ICollection<T> FindBy(Expression<Func<T, bool>> predicate)
         {
@@ -52,7 +66,7 @@ namespace Avika.Forum.DAO
         {
             if (TEntity.Id == 0)
             {
-               return await Post(TEntity);
+                return await Post(TEntity);
             }
             else
             {
@@ -61,8 +75,9 @@ namespace Avika.Forum.DAO
         }
         public async Task<int> Delete(int id)
         {
-            await Task.Factory.StartNew(async () => {
-                var tEntity=_context.Set<T>().Find(id);
+            await Task.Factory.StartNew(async () =>
+            {
+                var tEntity = _context.Set<T>().Find(id);
                 _context.Entry<T>(tEntity).State = EntityState.Deleted;
                 return await SaveAsync();
             });
@@ -70,8 +85,8 @@ namespace Avika.Forum.DAO
         }
         public async Task<int> Delete(T TEntity)
         {
-                _context.Entry<T>(TEntity).State = EntityState.Modified;
-                return await SaveAsync();
+            _context.Entry<T>(TEntity).State = EntityState.Modified;
+            return await SaveAsync();
         }
         private async Task<int> SaveAsync()
         {
@@ -98,12 +113,12 @@ namespace Avika.Forum.DAO
                 this._logger.EscribirError(e.ToString());
                 return await Task.FromResult<int>(-1);
             }
-                
+
         }
         async Task<int> Post(T TEntity)
         {
-                _context.Set<T>().Add(TEntity);
-                return await SaveAsync();
+            _context.Set<T>().Add(TEntity);
+            return await SaveAsync();
         }
     }
 }

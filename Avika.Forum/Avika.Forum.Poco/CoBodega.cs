@@ -45,8 +45,16 @@ namespace Avika.Forum.Model
         public decimal? TranInv { get; set; } // tran_inv
         public decimal? Cotizacion { get; set; } // cotizacion
 
+        // Reverse navigation
+
+        /// <summary>
+        /// Child CoMovInvs where [COMovInv].[bodega_moi] point to this entity (FK_COMovInv_COBodega)
+        /// </summary>
+        public virtual System.Collections.Generic.ICollection<CoMovInv> CoMovInvs { get; set; } // COMovInv.FK_COMovInv_COBodega
+
         public CoBodega()
         {
+            CoMovInvs = new System.Collections.Generic.List<CoMovInv>();
             InitializePartial();
         }
 

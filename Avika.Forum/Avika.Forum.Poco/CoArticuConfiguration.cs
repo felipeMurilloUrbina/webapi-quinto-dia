@@ -50,6 +50,11 @@ namespace Avika.Forum.Model
             Property(x => x.CodigoBarras).HasColumnName(@"codigo_barras").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(20);
             Property(x => x.OrganArt).HasColumnName(@"organ_art").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(1);
             Property(x => x.ClasifArt).HasColumnName(@"clasif_art").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(15);
+            Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
+
+            // Foreign keys
+            HasOptional(a => a.CoCatPro).WithMany(b => b.CoArticus).HasForeignKey(c => c.CatProdArt).WillCascadeOnDelete(false); // FK_COArticu_COCatPro
+            HasOptional(a => a.CoTipMat).WithMany(b => b.CoArticus).HasForeignKey(c => c.TipMatArt).WillCascadeOnDelete(false); // FK_COArticu_COTipMat
         }
     }
 

@@ -31,13 +31,7 @@ namespace Avika.Forum.Model
             HasKey(x => x.Id);
 
             Property(x => x.Id).HasColumnName(@"Id").HasColumnType("nvarchar").IsRequired().HasMaxLength(128).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
-            Property(x => x.Name).HasColumnName(@"Name").HasColumnType("nvarchar(max)").IsOptional();
-            Property(x => x.LastName).HasColumnName(@"LastName").HasColumnType("nvarchar(max)").IsOptional();
-            Property(x => x.CompanyId).HasColumnName(@"CompanyId").HasColumnType("int").IsOptional();
-            Property(x => x.DepartmentId).HasColumnName(@"DepartmentId").HasColumnType("int").IsOptional();
             Property(x => x.JoinDate).HasColumnName(@"JoinDate").HasColumnType("datetime").IsRequired();
-            Property(x => x.Language).HasColumnName(@"Language").HasColumnType("nvarchar(max)").IsOptional();
-            Property(x => x.Active).HasColumnName(@"Active").HasColumnType("bit").IsRequired();
             Property(x => x.Avatar).HasColumnName(@"Avatar").HasColumnType("nvarchar(max)").IsOptional();
             Property(x => x.Email).HasColumnName(@"Email").HasColumnType("nvarchar").IsOptional().HasMaxLength(256);
             Property(x => x.EmailConfirmed).HasColumnName(@"EmailConfirmed").HasColumnType("bit").IsRequired();
@@ -50,9 +44,10 @@ namespace Avika.Forum.Model
             Property(x => x.LockoutEnabled).HasColumnName(@"LockoutEnabled").HasColumnType("bit").IsRequired();
             Property(x => x.AccessFailedCount).HasColumnName(@"AccessFailedCount").HasColumnType("int").IsRequired();
             Property(x => x.UserName).HasColumnName(@"UserName").HasColumnType("nvarchar").IsRequired().HasMaxLength(256);
-            Property(x => x.Rfc).HasColumnName(@"Rfc").HasColumnType("nvarchar(max)").IsOptional();
-            Property(x => x.BirthDate).HasColumnName(@"BirthDate").HasColumnType("datetime").IsRequired();
-            Property(x => x.IncorporationDate).HasColumnName(@"IncorporationDate").HasColumnType("datetime").IsOptional();
+            Property(x => x.GranjaId).HasColumnName(@"GranjaId").HasColumnType("int").IsRequired();
+            Property(x => x.Nombre).HasColumnName(@"Nombre").HasColumnType("nvarchar(max)").IsOptional();
+            Property(x => x.Apellido).HasColumnName(@"Apellido").HasColumnType("nvarchar(max)").IsOptional();
+            Property(x => x.Activo).HasColumnName(@"Activo").HasColumnType("bit").IsRequired();
         }
     }
 

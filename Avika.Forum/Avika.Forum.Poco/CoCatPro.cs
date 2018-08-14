@@ -24,8 +24,16 @@ namespace Avika.Forum.Model
         public string DescripCap { get; set; } // descrip_cap (length: 15)
         public decimal? DiasVenCap { get; set; } // dias_ven_cap
 
+        // Reverse navigation
+
+        /// <summary>
+        /// Child CoArticus where [COArticu].[cat_prod_art] point to this entity (FK_COArticu_COCatPro)
+        /// </summary>
+        public virtual System.Collections.Generic.ICollection<CoArticu> CoArticus { get; set; } // COArticu.FK_COArticu_COCatPro
+
         public CoCatPro()
         {
+            CoArticus = new System.Collections.Generic.List<CoArticu>();
             InitializePartial();
         }
 

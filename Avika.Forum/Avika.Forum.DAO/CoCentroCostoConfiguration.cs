@@ -36,6 +36,7 @@ namespace Avika.Forum.DAO
             Property(x => x.Ingreso).HasColumnName(@"ingreso").HasColumnType("decimal").IsOptional().HasPrecision(16,2);
             Property(x => x.Porcentaje).HasColumnName(@"porcentaje").HasColumnType("decimal").IsOptional().HasPrecision(5,2);
             Property(x => x.Cliente).HasColumnName(@"cliente").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(12);
+            Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
         }
     }
 
