@@ -42,6 +42,13 @@ namespace Avika.Forum.Model
         public string ClasifArt { get; set; } // clasif_art (length: 15)
         public int Id { get; set; } // Id
 
+        // Reverse navigation
+
+        /// <summary>
+        /// Child CoArtBods where [COArtBod].[num_art_arb] point to this entity (FK_COArtBod_COArticu)
+        /// </summary>
+        public virtual System.Collections.Generic.ICollection<CoArtBod> CoArtBods { get; set; } // COArtBod.FK_COArtBod_COArticu
+
         // Foreign keys
 
         /// <summary>
@@ -60,6 +67,7 @@ namespace Avika.Forum.Model
             CodArtProv = "";
             CodigoBarras = "";
             OrganArt = "";
+            CoArtBods = new System.Collections.Generic.List<CoArtBod>();
             InitializePartial();
         }
 

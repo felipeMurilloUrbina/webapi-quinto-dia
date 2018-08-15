@@ -48,12 +48,17 @@ namespace Avika.Forum.Model
         // Reverse navigation
 
         /// <summary>
+        /// Child CoArtBods where [COArtBod].[bodega_arb] point to this entity (FK_COArtBod_COBodega)
+        /// </summary>
+        public virtual System.Collections.Generic.ICollection<CoArtBod> CoArtBods { get; set; } // COArtBod.FK_COArtBod_COBodega
+        /// <summary>
         /// Child CoMovInvs where [COMovInv].[bodega_moi] point to this entity (FK_COMovInv_COBodega)
         /// </summary>
         public virtual System.Collections.Generic.ICollection<CoMovInv> CoMovInvs { get; set; } // COMovInv.FK_COMovInv_COBodega
 
         public CoBodega()
         {
+            CoArtBods = new System.Collections.Generic.List<CoArtBod>();
             CoMovInvs = new System.Collections.Generic.List<CoMovInv>();
             InitializePartial();
         }

@@ -13,7 +13,7 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
     [RoutePrefix("api/articulos")]
     public class ArticulosController : BaseApiController
     {
-        private  ServicioArticulo servicio;
+        private ServicioArticulo servicio;
         public ArticulosController()
         {
             this.servicio = new ServicioArticulo(new Context(), this._logger);
@@ -26,13 +26,23 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
         [Route(""), HttpGet]
         public async Task<IHttpActionResult> Get([FromUri]int? pagina = null, [FromUri] int? registros = null)
         {
-            return Ok(await this.servicio.Get(pagina, registros));
+            var bodega = Request.Headers.GetValues("bodega").FirstOrDefault();
+            if (bodega == null)
+                return BadRequest("Es necesario seleccionar una bodega.");
+            return Ok(await this.servicio.Get(bodega, pagina, registros));
         }
         [Route("{id}"), HttpGet]
-        public async Task<IHttpActionResult> Get([FromUri]int? id=null)
+        public async Task<IHttpActionResult> Get([FromUri]int? id = null)
         {
             var articulo = this.servicio.GetId((int)id);
             return Ok(articulo);
+        }
+
+        [Route("cantidad"), HttpGet]
+        public async Task<IHttpActionResult> GetCantidad()
+        {
+            var cantidad = this.servicio.GetCantidad();
+            return Ok(cantidad);
         }
 
     }

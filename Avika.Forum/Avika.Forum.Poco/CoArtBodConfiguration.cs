@@ -79,6 +79,10 @@ namespace Avika.Forum.Model
             Property(x => x.AplDctoArb).HasColumnName(@"apl_dcto_arb").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(1);
             Property(x => x.DctoArb).HasColumnName(@"dcto_arb").HasColumnType("decimal").IsOptional().HasPrecision(5,2);
             Property(x => x.LocalizacionArb).HasColumnName(@"localizacion_arb").HasColumnType("char").IsOptional().IsFixedLength().IsUnicode(false).HasMaxLength(10);
+
+            // Foreign keys
+            HasRequired(a => a.CoArticu).WithMany(b => b.CoArtBods).HasForeignKey(c => c.NumArtArb).WillCascadeOnDelete(false); // FK_COArtBod_COArticu
+            HasRequired(a => a.CoBodega).WithMany(b => b.CoArtBods).HasForeignKey(c => c.BodegaArb).WillCascadeOnDelete(false); // FK_COArtBod_COBodega
         }
     }
 

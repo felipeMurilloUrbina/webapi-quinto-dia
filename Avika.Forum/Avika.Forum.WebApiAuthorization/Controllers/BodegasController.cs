@@ -26,6 +26,7 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
         [Route(""), HttpGet]
         public async Task<IHttpActionResult> Get([FromUri]int? pagina = null, [FromUri] int? registros = null)
         {
+
             var items = this.servicio.Get();
             return Ok(new {items});
         }

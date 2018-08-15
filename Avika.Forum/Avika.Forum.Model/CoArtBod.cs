@@ -70,6 +70,18 @@ namespace Avika.Forum.Model
         public decimal? DctoArb { get; set; } // dcto_arb
         public string LocalizacionArb { get; set; } // localizacion_arb (length: 10)
 
+        // Foreign keys
+
+        /// <summary>
+        /// Parent CoArticu pointed by [COArtBod].([NumArtArb]) (FK_COArtBod_COArticu)
+        /// </summary>
+        public virtual CoArticu CoArticu { get; set; } // FK_COArtBod_COArticu
+
+        /// <summary>
+        /// Parent CoBodega pointed by [COArtBod].([BodegaArb]) (FK_COArtBod_COBodega)
+        /// </summary>
+        public virtual CoBodega CoBodega { get; set; } // FK_COArtBod_COBodega
+
         public CoArtBod()
         {
             StatusArb = "";
