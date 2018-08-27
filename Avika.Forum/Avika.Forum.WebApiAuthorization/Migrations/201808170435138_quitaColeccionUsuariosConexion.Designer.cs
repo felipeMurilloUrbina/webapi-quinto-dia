@@ -7,13 +7,13 @@ namespace Avika.Forum.WebApiAuthorization.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ultimosCambios : IMigrationMetadata
+    public sealed partial class quitaColeccionUsuariosConexion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ultimosCambios));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(quitaColeccionUsuariosConexion));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808082116225_ultimosCambios"; }
+            get { return "201808170435138_quitaColeccionUsuariosConexion"; }
         }
         
         string IMigrationMetadata.Source

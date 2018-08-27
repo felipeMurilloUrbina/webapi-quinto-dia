@@ -14,7 +14,6 @@ namespace Avika.Forum.WebApiAuthorization.Providers
 {
     public class CustomOAuthProvider : OAuthAuthorizationServerProvider
     {
-
         public override Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
             string clientId = string.Empty;

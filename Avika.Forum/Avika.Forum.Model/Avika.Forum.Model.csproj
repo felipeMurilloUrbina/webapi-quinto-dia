@@ -74,8 +74,11 @@
     <Compile Include="CoMovInv.cs" />
     <Compile Include="CoTipMat.cs" />
     <Compile Include="Dto\BodegaDto.cs" />
+    <Compile Include="Dto\RequisicionDTO.cs" />
+    <Compile Include="Dto\SalidaAlmacenDTO.cs" />
     <Compile Include="Extensions\CoArticu.cs" />
     <Compile Include="Extensions\CoCentroCosto.cs" />
+    <Compile Include="Extensions\CoMovInv.cs" />
     <Compile Include="Granja.cs" />
     <Compile Include="Interfaces\ICatalogBasic.cs" />
     <Compile Include="Interfaces\IDeleteLogic.cs" />

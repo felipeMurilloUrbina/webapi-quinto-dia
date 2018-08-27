@@ -46,6 +46,8 @@ namespace Avika.Forum.Model
         public string ComentMoi { get; set; } // coment_moi (length: 30)
         public string NumEntSalMoi { get; set; } // num_ent_sal_moi (length: 8)
         public string NumTransMoi { get; set; } // num_trans_moi (length: 8)
+        public int Id { get; set; } // Id
+        public System.DateTime? FechaMovimiento { get; set; } // FechaMovimiento
 
         // Foreign keys
 

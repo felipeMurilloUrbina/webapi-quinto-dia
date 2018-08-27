@@ -1,5 +1,4 @@
-﻿using Avika.Forum.DAO;
-using Avika.Forum.WebApiAuthorization.Formats;
+﻿using Avika.Forum.WebApiAuthorization.Formats;
 using Avika.Forum.WebApiAuthorization.Infrastructure;
 using Avika.Forum.WebApiAuthorization.Models;
 using Avika.Forum.WebApiAuthorization.Providers;

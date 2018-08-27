@@ -13,18 +13,19 @@ namespace Avika.Forum.WebApiAuthorization.Infrastructure
 {
     public class CustomAuthorizeAttribute: AuthorizationFilterAttribute
     {
+        public static string CadenaConexion = "";
         public string Role { get; set; }
         public override Task OnAuthorizationAsync(HttpActionContext actionContext, System.Threading.CancellationToken cancellationToken)
         {
-            var principal = actionContext.RequestContext.Principal as ClaimsPrincipal;
-
-            if (!principal.Identity.IsAuthenticated)
+            CustomAuthorizeAttribute.CadenaConexion = actionContext.Request.Headers.GetValues("granja").FirstOrDefault();
+            if(String.IsNullOrEmpty(CustomAuthorizeAttribute.CadenaConexion))
             {
                 actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized);
                 return Task.FromResult<object>(null);
             }
+            var principal = actionContext.RequestContext.Principal as ClaimsPrincipal;
 
-            if (!(principal.IsInRole(Role)))
+            if (!principal.Identity.IsAuthenticated)
             {
                 actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized);
                 return Task.FromResult<object>(null);

@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="ServicioArticulo.cs" />
     <Compile Include="ServicioBodega.cs" />
+    <Compile Include="ServicioSalida.cs" />
     <Compile Include="SevicioCentroCosto.cs" />
     <Compile Include="Smtp.cs" />
   </ItemGroup>

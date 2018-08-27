@@ -6,14 +6,14 @@ namespace Avika.Forum.WebApiAuthorization.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class initial : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
+    public sealed partial class agregaCampoConexion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(agregaCampoConexion));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808071813076_initial"; }
+            get { return "201808171730098_agregaCampoConexion"; }
         }
         
         string IMigrationMetadata.Source

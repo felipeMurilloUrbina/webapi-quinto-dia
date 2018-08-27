@@ -24,8 +24,8 @@ namespace Avika.Forum.DAO
         public DbSet<CoMovInv> MovimientosInventario { get; set; }
         public DbSet<CoTipMat> Tipos { get; set; }
         public DbSet<Granja> Granjas { get; set; }
-        public Context()
-           : base("name=DefaultConnection")
+        public Context(string conexion)
+           : base(conexion)
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
@@ -60,9 +60,9 @@ namespace Avika.Forum.DAO
         {
             this.EnableFilter("DeleteLogic");
         }
-        public static Context Create()
-        {
-            return new Context();
-        }
+        //public static Context Create()
+        //{
+        //    return new Context();
+        //}
     }
 }

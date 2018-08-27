@@ -1,5 +1,6 @@
 ﻿using Avika.Forum.BLL;
 using Avika.Forum.DAO;
+using Avika.Forum.WebApiAuthorization.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,13 @@ using System.Web.Http;
 
 namespace Avika.Forum.WebApiAuthorization.Controllers
 {
-    [RoutePrefix("api/centro-costos")]
+    [CustomAuthorize(Role = "Administrador"), RoutePrefix("api/centro-costos")]
     public class CentroCostosController : BaseApiController
     {
         private SevicioCentroCosto servicio;
 
         public CentroCostosController()
         {
-            this.servicio = new SevicioCentroCosto(new Context(), this._logger);
         }
         /// <summary>
         /// retorna todos los centros de costos
@@ -26,6 +26,7 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
         [Route(""), HttpGet]
         public async Task<IHttpActionResult> Get([FromUri]int? pagina = null, [FromUri] int? registros = null)
         {
+            this.servicio = new SevicioCentroCosto(new Context(CustomAuthorizeAttribute.CadenaConexion), this._logger);
             return Ok(await this.servicio.Get(pagina, registros));
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Avika.Forum.BLL;
 using Avika.Forum.DAO;
+using Avika.Forum.WebApiAuthorization.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,17 +17,17 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
         private ServicioBodega servicio;
         public BodegasController()
         {
-            this.servicio = new ServicioBodega(new Context(), this._logger);
         }
 
         /// <summary>
         /// Obtener Bodegas
         /// </summary>
         /// <returns>Lista de bodegas</returns>
-        [Route(""), HttpGet]
+        [Route(""), HttpGet, CustomAuthorize]
         public async Task<IHttpActionResult> Get([FromUri]int? pagina = null, [FromUri] int? registros = null)
         {
 
+            this.servicio = new ServicioBodega(new Context(CustomAuthorizeAttribute.CadenaConexion), this._logger);
             var items = this.servicio.Get();
             return Ok(new {items});
         }
@@ -35,11 +36,10 @@ namespace Avika.Forum.WebApiAuthorization.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Bodega</returns>
-        [Route("{id}"), HttpGet]
+        [Route("{id}"), HttpGet, CustomAuthorize]
         public async Task<IHttpActionResult> Get([FromUri]int? id = null)
         {
-            //var articulo = this.servicio.GetId((int)id);
-            //return Ok(articulo);
+            this.servicio = new ServicioBodega(new Context(CustomAuthorizeAttribute.CadenaConexion), this._logger);
             return Ok();
         }
 

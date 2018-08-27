@@ -13,7 +13,7 @@ namespace Avika.Forum.DAO
     public class Repository<T> where T : class, IObject
     {
         readonly Context _context = null;
-        readonly Logger _logger = null;
+        public readonly Logger _logger = null;
         public Repository(Context context, Logger logger)
         {
             this._context = context;
