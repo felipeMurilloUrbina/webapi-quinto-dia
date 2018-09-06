@@ -27,9 +27,9 @@ namespace Avika.Forum.DAO
                 qty = qty == 0 ? totalItems : qty;
                 var totalPages = (int)Math.Ceiling((double)totalItems / (int)qty);
                 var items = this._context.Set<T>()
-                    .OrderBy(c => c.Id)
-                    .Skip(((int)page - 1) * (int)qty)
-                    .Take((int)qty)
+                    //.OrderBy(c => c.Id)
+                    //.Skip(((int)page - 1) * (int)qty)
+                    //.Take((int)qty)
                     .ToList();
                 var result = new Pagination<T>()
                 {
