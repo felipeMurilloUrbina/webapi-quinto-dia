@@ -28,9 +28,7 @@ namespace Avika.Forum.DAO
         public GranjaConfiguration(string schema)
         {
             ToTable("Granjas", schema);
-            HasKey(x => x.Id);
 
-            Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(x => x.Descripcion).HasColumnName(@"Descripcion").HasColumnType("nvarchar").IsRequired().HasMaxLength(100);
             Property(x => x.CadenaConexion).HasColumnName(@"CadenaConexion").HasColumnType("nvarchar").IsRequired().HasMaxLength(300);
         }

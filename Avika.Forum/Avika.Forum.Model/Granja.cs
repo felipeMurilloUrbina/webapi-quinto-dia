@@ -20,7 +20,6 @@ namespace Avika.Forum.Model
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.37.0.0")]
     public partial class Granja
     {
-        public int Id { get; set; } // Id (Primary key)
         public string Descripcion { get; set; } // Descripcion (length: 100)
         public string CadenaConexion { get; set; } // CadenaConexion (length: 300)
 

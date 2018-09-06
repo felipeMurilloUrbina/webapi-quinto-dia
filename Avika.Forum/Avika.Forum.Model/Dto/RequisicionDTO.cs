@@ -9,7 +9,7 @@ namespace Avika.Forum.Model.Dto
     public class RequisicionDTO
     {
         public int Folio { get; set; }
-        public string Folio { get; set; }
+        //public string Folio { get; set; }
         public DateTime Fecha { get; set; }
     }
 }

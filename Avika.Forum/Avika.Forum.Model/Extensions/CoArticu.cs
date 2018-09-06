@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace Avika.Forum.Model
 {
-    public partial class CoArticu : IObject
+    public partial class CoArticu: IObject
     {
+        [NotMapped]
+        public int Id { get; set; }
         public string TipoMaterialString
         {
             get

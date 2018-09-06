@@ -40,7 +40,6 @@ namespace Avika.Forum.Model
         public string CodigoBarras { get; set; } // codigo_barras (length: 20)
         public string OrganArt { get; set; } // organ_art (length: 1)
         public string ClasifArt { get; set; } // clasif_art (length: 15)
-        public int Id { get; set; } // Id
 
         // Reverse navigation
 

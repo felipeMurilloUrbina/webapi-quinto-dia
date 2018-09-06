@@ -259,7 +259,7 @@ namespace Avika.Forum.WebApiAuthorization
                         //
                         //c.EnableApiKeySupport("apiKey", "header");
                     });
-            Start();
+            //Start();
         }
         
     }
